@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-jdwp
+spec:
+  selector:
+    matchLabels:
+      app: example-jdwp
+  template:
+    metadata:
+      labels:
+        app: example-jdwp
+    spec:
+      containers:
+        - name: example-jdwp
+          image: imzerofiltre/example-jdwp:0.0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5005
