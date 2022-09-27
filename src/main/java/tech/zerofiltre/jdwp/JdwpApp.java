@@ -25,12 +25,7 @@ public class JdwpApp {
             int i = 0;
             String[] data = getStringsFromRemoteService();
             while (true) {
-                try {
-                    System.out.println("String " + i + " =" + data[i]);
-                } catch (Exception e) {
-                    System.out.println("No more data to print");
-                    i=0;
-                }
+                System.out.println("String " + i + " =" + data[i]);
                 i++;
                 sleep();
             }
